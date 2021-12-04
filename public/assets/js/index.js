@@ -25,6 +25,11 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+// index.js is talking to server.js
+// server.js is talking to api-routes.js
+// api-routes.js is talking to db.json
+// and then the other way around
+
 const getNotes = () =>
   fetch("/api/notes", {
     method: "GET",
