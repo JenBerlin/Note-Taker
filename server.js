@@ -1,20 +1,16 @@
 const express = require("express");
-const path = require("path");
-
+const htmlRoutes = require("./routes/html-routes");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "/public/index.html"))
-);
-
-app.get("/notes", (req, res) =>
-  res.sendFile(path.join(__dirname, "/public/notes.html"))
-);
+// Without these two lines the server will not work.
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Alle statischen files bitte hier aufrufen
 app.use(express.static("public"));
+app.use(htmlRoutes);
 
 app.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/db/db.json"));
