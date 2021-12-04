@@ -33,4 +33,21 @@ router.post("/api/notes", (req, res) => {
   });
 });
 
+router.delete("/api/notes/:id", (req, res) => {
+  fs.readFile("db/db.json", "utf8", (err, data) => {
+    if (err) throw err;
+    const getId = req.params.id;
+    const noteDb = JSON.parse(data);
+    for (let i = 0; i < noteDb.length; i++) {
+      if (getId === noteDb[i].id) {
+        noteDb.splice([i], 1);
+        fs.writeFile("db/db.json", JSON.stringify(noteDb), (err) => {
+          if (err) throw err;
+          res.json(noteDb);
+        });
+      }
+    }
+  });
+});
+
 module.exports = router;
