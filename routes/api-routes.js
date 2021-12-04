@@ -11,6 +11,7 @@ router.get("/api/notes", (req, res) => {
     if (err) {
       console.log(err);
     } else {
+      console.log("api");
       return res.json(JSON.parse(data));
     }
   });
