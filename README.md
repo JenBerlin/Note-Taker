@@ -56,5 +56,5 @@ The application had given code (public, db folder and the package.json file). Th
 - README.md
 - server.js
 
-- GitHub (dev branch): https://github.com/JenBerlin/Team-Profile-Generator/tree/dev
+- GitHub (dev branch): https://github.com/JenBerlin/Note-Taker/tree/dev
 - Heroku: https://note-taker-bla-bla.herokuapp.com/
