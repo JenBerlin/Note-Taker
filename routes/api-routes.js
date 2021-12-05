@@ -6,7 +6,6 @@ const uniqid = require("uniqid");
 router.get("/api/notes", (req, res) => {
   // utf8 format because this is a html format
   fs.readFile("db/db.json", "utf8", (err, data) => {
-    console.log(data);
     //   This is different to console.log error
     if (err) {
       console.log(err);
