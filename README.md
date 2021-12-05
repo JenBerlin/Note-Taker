@@ -19,7 +19,8 @@ The application had given code (public, db folder and the package.json file). Th
 
 # Screenshots
 
-![Getting Started](./image/ScreenShot_1.png)
+![Getting Started](./image/1-Screenshot.png)
+![Getting Started](./image/2-Screenshot.png)
 
 # Tech/Framwork used
 
@@ -56,4 +57,4 @@ The application had given code (public, db folder and the package.json file). Th
 - server.js
 
 - GitHub (dev branch): https://github.com/JenBerlin/Team-Profile-Generator/tree/dev
-- Walkthrough-Video: https://drive.google.com/file/d/1fyKDyr4wD4V7dnOPGJ1lM171t0YUj6xH/view?usp=sharing
+- Heroku: https://note-taker-bla-bla.herokuapp.com/
